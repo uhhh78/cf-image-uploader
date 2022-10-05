@@ -12,7 +12,17 @@ const Register = () => {
 			password: passwordInputElement,
 			userName: userNameInputElement,
 		}
+		const requestOptions = {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(data),
+		}
+		const res = await fetch("/api/auth/register", requestOptions).then(
+			(res) => res.json()
+		)
+		console.log(res)
 	}
+	
 	return (
 		<div className="min-h-screen">
 			<Header />
