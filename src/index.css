@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body{
+    @apply bg-black text-white
+  }
+  body::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 0.5rem;
+  }
+  body::-webkit-scrollbar-track {
+    @apply bg-primary
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: transparent;
+    box-shadow: 0px 0px 0px 100000vh black;
+    border-radius: 10px;
+  }
+  
+}
+
